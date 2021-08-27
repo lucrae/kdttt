@@ -1,0 +1,49 @@
+:root {
+  /* colours */
+  --col-board: #dfb68d;
+  --col-board-accent: #cf945a;
+  --col-board-border: #755536;
+  --col-win: #47c276;
+}
+
+html {
+  font-family: monospace;
+  margin: 0 auto;
+}
+
+.board {
+  /* layout */
+  display: grid;
+  width: 160px;
+	height: 160px;
+
+  /* design */
+  border: 3px solid var(--col-board-border);
+}
+
+.cell {
+  /* layout */
+  display: flex;
+
+  /* design */
+  background-color: var(--col-board);
+  border: 1px solid var(--col-board-border);
+
+  /* text */
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cell-unoccupied {
+  cursor: pointer;
+}
+
+.cell-unoccupied:hover {
+  background-color: var(--col-board-accent);
+}
+
+.cell-win {
+  background-color: var(--col-win);
+}
