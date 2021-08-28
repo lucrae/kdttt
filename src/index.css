@@ -1,8 +1,11 @@
 :root {
+  --board-size: 100px;
+
   /* colours */
   --col-board: #dfb68d;
   --col-board-accent: #cf945a;
   --col-board-border: #755536;
+  --col-board-desc: #ddd;
   --col-win: #47c276;
 }
 
@@ -11,14 +14,33 @@ html {
   margin: 0 auto;
 }
 
+.board-suite {
+  /* layout */
+  display: grid;
+  width: 600px;
+  height: 640px;
+}
+
 .board {
   /* layout */
   display: grid;
-  width: 160px;
-	height: 160px;
+  width: var(--board-size);
+	height: var(--board-size);
 
   /* design */
   border: 3px solid var(--col-board-border);
+}
+
+.board-desc {
+  /* layout */
+  width: calc(var(--board-size));
+
+  /* design */
+  background-color: var(--col-board-desc);
+  font-size: 10px;
+  padding: 1px 3px 3px 3px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .cell {
@@ -32,7 +54,7 @@ html {
   /* text */
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
 }
 
